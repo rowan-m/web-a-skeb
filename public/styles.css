@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'montezregular';
-  src: url('/third_party/Montez-Regular-webfont.woff') format('woff');
+  src: url('/third_party/Montez-Regular-webfont-subset.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: fallback;

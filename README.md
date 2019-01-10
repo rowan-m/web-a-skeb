@@ -37,6 +37,13 @@ npm run build
 firebase serve
 ```
 
+## Notes
+
+The Montez font has been subsetted using [`glyphhanger`](https://github.com/filamentgroup/glyphhanger).
+```sh
+DEBUG=glyphhanger* glyphhanger --whitelist=WebASk --subset=Montez-Regular-webfont.woff
+```
+
 ## Contributing
 
 This is a playground project, so there is so much room for improvement! Issues and pull requests are always welcome. For details, see [CONTRIBUTING](CONTRIBUTING.md)

@@ -26,7 +26,7 @@ self.addEventListener('install', (event) => {
         '/img/icons/favicon-32x32.png',
         '/favicon.ico',
         '/index.html',
-        '/third_party/Montez-Regular-webfont.woff',
+        '/third_party/Montez-Regular-webfont-subset.woff2',
         '/styles.css',
       ]);
     })
