@@ -52,6 +52,7 @@ class Sketch {
     if (this.path.length > 1) {
       this.erasedPaths.push(this.path);
       this.path = [this.lastPoint];
+      this._lastAngle = null;
       return true;
     }
 
