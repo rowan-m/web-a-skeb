@@ -29,6 +29,8 @@ self.addEventListener('install', (event) => {
         '/third_party/Montez-Regular-webfont-subset.woff2',
         '/styles.css',
       ]);
+    }).then(() => {
+      return self.skipWaiting();
     })
   );
 });
@@ -44,6 +46,8 @@ self.addEventListener('activate', (event) => {
           }
         })
       );
+    }).then(() => {
+      return self.clients.claim();
     })
   );
 });
