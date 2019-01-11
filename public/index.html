@@ -57,12 +57,10 @@
   </h1>
   <div class="screen fast">
     <svg class="active-sketch" preserveAspectRatio="none" x="0" y="0" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-      <path class="sketch-path" d="M8 8 M12 12 M10 10 "></path>
-      <line class="sketch-stylus" x1="10" x2="10" y1="10" y2="10" />
       <defs>
         <filter id="pencil-effect">
-          <feTurbulence baseFrequency="1" />
-          <feDisplacementMap scale="2" xChannelSelector="R" in="SourceGraphic" />
+          <feTurbulence type="turbulence" baseFrequency="0.5" numOctaves="1" result="turbulence" />
+          <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="2" xChannelSelector="R" yChannelSelector="G" />
         </filter>
         <filter id="drop-shadow">
           <feDropShadow dx="1" dy="1" stdDeviation="0.4" flood-color="#000000" flood-opacity="0.4" />
@@ -98,6 +96,8 @@
           </stop>
         </linearGradient>
       </defs>
+      <path class="sketch-path" d="M8 8 M12 12 M10 10 "></path>
+      <line class="sketch-stylus" x1="10" x2="10" y1="10" y2="10" />
     </svg>
   </div>
   <touch-knob value="10" class="horz-knob knob">H<br />⇔</touch-knob>
@@ -106,6 +106,7 @@
     <button class="button-shake">👋 Shake</button>
     <toggle-fullscreen><button class="button-fullscreen">⤴️ Fullscreen</button></toggle-fullscreen>
     <button class="button-detail" value="fancy">✨ Fancy</button>
+    <a href="https://github.com/GoogleChromeLabs/web-a-skeb" target="_blank"><button>❔ Learn more</button></a>
   </div>
 </skeb-case>
 <script src="/bundle.js" async defer></script>

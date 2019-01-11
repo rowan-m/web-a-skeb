@@ -22,26 +22,31 @@
   font-display: fallback;
 }
 
-html,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-  min-width: 280px;
   font-family: sans-serif;
   color: #333333;
   background: #941f1f;
   margin: 0;
   padding: 0;
-  /* overflow: hidden; */
-  overscroll-behavior: none;
-  user-select: none;
+  overflow: hidden;
 }
 
 .casing {
-  min-height: 98vh;
-  position: fixed;
-  top: 2px;
-  bottom: 6px;
-  left: 6px;
-  right: 6px;
+  margin: 1vh 1vw 1vh 1vw;
+  width: 98vw;
+  height: 98vh;
   background: #ff0000;
   border: 2px solid #991111;
   border-radius: 10px;
@@ -114,6 +119,8 @@ h1 {
 }
 
 button {
+  user-select: none;
+  -webkit-user-select: none;
   background: #e80000;
   color: #ffffff;
   border-radius: 10px;
@@ -198,13 +205,14 @@ button:active {
 }
 
 touch-knob {
-  width: 75px;
-  height: 75px;
+  width: 80px;
+  height: 80px;
   border: 6px dotted #d3d3d3;
   background: #ffffff;
   border-radius: 50%;
   text-align: center;
   user-select: none;
+  -webkit-user-select: none;
   touch-action: none;
   will-change: transform;
   margin: 0;
