@@ -10,6 +10,7 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/rowan-m/web-a-skeb",
   "dependencies": {
+    "@webcomponents/custom-elements": "^1.2.1",
     "shake.js": "^1.2.2",
     "simplify-js": "^1.2.3"
   },
