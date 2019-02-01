@@ -1,6 +1,6 @@
 {
-  "name": "Web A Skeb",
-  "short_name": "WebASkeb",
+  "name": "Dial a Doodle",
+  "short_name": "DialADoodle",
   "icons": [
     {
       "src": "/img/icons/android-chrome-192x192.png",
@@ -13,8 +13,8 @@
       "type": "image/png"
   }
   ],
-  "theme_color": "#991111",
-  "background_color": "#991111",
+  "theme_color": "#4A4063",
+  "background_color": "#4A4063",
   "start_url": "/",
   "display": "standalone",
   "orientation": "any"
