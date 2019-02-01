@@ -11,7 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-var cacheName = 'webaskeb-v20190113a';
+var cacheName = 'dialadoodle-v20190201c';
 
 // Cache a very basic selection of resources
 self.addEventListener('install', (event) => {
@@ -26,7 +26,6 @@ self.addEventListener('install', (event) => {
         '/img/icons/favicon-32x32.png',
         '/favicon.ico',
         '/index.html',
-        '/third_party/Montez-Regular-webfont-subset.woff2',
         '/styles.css',
       ]);
     }).then(() => {
