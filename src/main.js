@@ -13,11 +13,11 @@
 // limitations under the License.
 import '@webcomponents/custom-elements';
 import { TouchKnob } from './touch-knob.js';
-import { SkebCase } from './skeb-case.js';
+import { DoodleCase } from './doodle-case.js';
 import { ToggleFullscreen } from './toggle-fullscreen.js';
 
 window.customElements.define('touch-knob', TouchKnob);
-window.customElements.define('skeb-case', SkebCase);
+window.customElements.define('doodle-case', DoodleCase);
 window.customElements.define('toggle-fullscreen', ToggleFullscreen);
 
 if ('serviceWorker' in navigator) {

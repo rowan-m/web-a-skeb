@@ -31,14 +31,15 @@ class Sketch {
       x: parseFloat(point.x),
       y: parseFloat(point.y)
     }
+
     const angle = Math.atan2(
       point.x - this.lastPoint.x,
       point.y - this.lastPoint.y
     );
 
-    if (angle === this._lastAngle) {
+    if (angle === this._lastAngle && (this.lastPoint.x !== point.x || this.lastPoint.y !== point.y)) {
       this.path.pop();
-    }
+8    }
 
     this._lastAngle = angle;
     this.path.push(point);
@@ -60,7 +61,7 @@ class Sketch {
   }
 }
 
-export class SkebCase extends HTMLElement {
+export class DoodleCase extends HTMLElement {
   constructor() {
     super();
     this._canDraw = true;
@@ -172,8 +173,7 @@ export class SkebCase extends HTMLElement {
       erasedSketch.setAttributeNS(null, 'preserveAspectRatio', 'none');
       erasedSketch.setAttributeNS(null, 'x', '0');
       erasedSketch.setAttributeNS(null, 'y', '0');
-      erasedSketch.setAttributeNS(null, 'viewBox', '0 0 300 300');
-      erasedSketch.setAttributeNS(null, 'height', '100%');
+      erasedSketch.setAttributeNS(null, 'viewBox', '-2 2 302 302');
       erasedSketch.style.opacity = '1';
 
       erasedSketch.appendChild(this._path);

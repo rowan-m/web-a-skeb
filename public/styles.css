@@ -14,150 +14,99 @@
  * limitations under the License.
  */
 
-@font-face {
-  font-family: 'montezregular';
-  src: url('/third_party/Montez-Regular-webfont-subset.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: fallback;
-}
 
 html {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   overflow: hidden;
   overscroll-behavior: none;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 body {
   font-family: sans-serif;
-  color: #333333;
-  background: #941f1f;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background: #4F1271;
+  color: #4A4063;
 }
 
 .casing {
-  margin: 1vh 1vw 1vh 1vw;
-  width: 98vw;
-  height: 98vh;
-  background: #ff0000;
-  border: 2px solid #991111;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: calc(98vh - 2px);
+  padding: 1vh 2vw 1vh 2vw;
+  border: 1px solid #4F1271;
   border-radius: 10px;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas:
-    'title       title    title'
-    'screen      screen   screen'
-    'horz-scroll controls vert-scroll';
-}
-
-@media (orientation: landscape) {
-  .casing {
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto 1fr auto auto;
-  grid-template-areas:
-    'title       title    title      '
-    '.           screen   .          '
-    'horz-scroll screen   vert-scroll'
-    'horz-scroll controls vert-scroll';
-  }
-}
-
-h1 {
-  margin: 0;
-  padding: 0;
-  grid-area: title;
-  color: #eee8aa;
-  font-size: 8vw;
-  text-align: center;
-  text-shadow: -1.2px -1.2px 0.8px #daa520, 1.5px 1.5px 0.8px #660000;
-}
-
-@media screen and (min-width: 450px) {
- h1 {
-   font-size: 36px;
- }
+  background: #C8C6D7;
 }
 
 .screen {
-  position: relative;
-  border-radius: 10px;
-  border: 2px solid #808080;
-  background: #c0c0c0;
-  grid-area: screen;
-}
-
-@media (orientation: portrait) {
-  .screen {
-    margin: 0 10px 10px 10px;
-  }
-}
-
-.horz-knob {
-  grid-area: horz-scroll;
-  margin: 4px;
-}
-
-.vert-knob {
-  grid-area: vert-scroll;
-  margin: 4px;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
 }
 
 .controls {
-  grid-area: controls;
-  margin: 4px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+touch-knob {
+  flex: 0 0 80px;
+  width: 80px;
+  height: 80px;
+  border: 6px dotted #BFACC8;
+  background: #ffffff;
+  opacity: 0.6;
+  font-weight: bolder;
+  border-radius: 50%;
   text-align: center;
-  vertical-align: middle;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  will-change: transform;
+  margin: 0;
+  overflow: hidden;
+  contain: strict;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: baseline;
 }
 
 button {
+  width: 90px;
   user-select: none;
   -webkit-user-select: none;
-  background: #e80000;
-  color: #ffffff;
-  border-radius: 10px;
-  border: 1px solid #eee8aa;
-  outline: 0;
-  padding: 5px 6px 5px 6px;
-  margin: 5px;
   transition: transform 0.1s ease;
-}
-
-button:hover {
-  background: #b00000;
+  background: #ffffff;
+  opacity: 0.6;
+  border: 1px solid #4A4063;
+  border-radius: 4px;
+  outline: 0;
+  padding: 4px;
+  margin: 3px 1px 0 1px;
+  color: #4A4063;
+  font-weight: bold;
 }
 
 button:focus {
-  transform: scale(1.05);
-  background: #d00000;
+  border: 1px solid #4F1271;
 }
 
 button:active {
-  transform: scale(0.95);
-}
-
-.title-globe {
-  font-style: normal;
-  font-size: 90%;
-}
-
-.title-desc {
-  font-family: sans-serif;
-  font-style: italic;
-  font-size: 80%;
-}
-
-.title-name {
-  font-weight: bold;
-  font-family: 'montezregular', cursive;
+  transform: scale(0.9);
 }
 
 .active-sketch,
@@ -202,20 +151,4 @@ button:active {
 .fanciest>.erased-sketch>.sketch-path {
   stroke: url(#rainbow-effect);
   filter: url(#drop-shadow);
-}
-
-touch-knob {
-  width: 80px;
-  height: 80px;
-  border: 6px dotted #d3d3d3;
-  background: #ffffff;
-  border-radius: 50%;
-  text-align: center;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: none;
-  will-change: transform;
-  margin: 0;
-  overflow: hidden;
-  contain: strict;
 }

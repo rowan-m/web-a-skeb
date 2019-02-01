@@ -35,9 +35,9 @@ export class ToggleFullscreen extends HTMLElement {
 
   _onFullscreenchange() {
     if (document.fullscreenElement !== null) {
-      this._fullscreenButton.textContent = '⤵️ Normal screen';
+      this._fullscreenButton.textContent = '⤵️ Return';
     } else {
-      this._fullscreenButton.textContent = '⤴️ Fullscreen';
+      this._fullscreenButton.textContent = '⤴️ Full';
     }
   }
 
