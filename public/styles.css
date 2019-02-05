@@ -53,10 +53,11 @@ body {
 
 .controls {
   width: 100%;
+  margin-bottom: 4px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 touch-knob {
@@ -67,7 +68,7 @@ touch-knob {
   background: #ffffff;
   opacity: 0.6;
   font-weight: bolder;
-  border-radius: 50%;
+  border-radius: 100%;
   text-align: center;
   user-select: none;
   -webkit-user-select: none;
@@ -82,6 +83,7 @@ touch-knob {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-self: flex-end;
   align-items: baseline;
 }
 
