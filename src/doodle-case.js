@@ -39,7 +39,7 @@ class Sketch {
 
     if (angle === this._lastAngle && (this.lastPoint.x !== point.x || this.lastPoint.y !== point.y)) {
       this.path.pop();
-8    }
+    }
 
     this._lastAngle = angle;
     this.path.push(point);
