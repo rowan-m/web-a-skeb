@@ -90,6 +90,9 @@
                 repeatCount="indefinite" />
             </stop>
           </linearGradient>
+          <pattern id="pattern" x="2.5" y="2.5" width="10" height="10" patternUnits="userSpaceOnUse">
+              <circle cx="2.5" cy="2.5" r="2.5" stroke="none" fill="#4A4063" />
+          </pattern>
         </defs>
         <path class="sketch-path" d="M8 8 M12 12 M10 10 "></path>
         <line class="sketch-stylus" x1="10" x2="10" y1="10" y2="10" />
@@ -97,14 +100,26 @@
     </div>
   </main>
     <div class="controls">
-      <touch-knob value="10" class="horz-knob knob">H<br />⬄</touch-knob>
+      <touch-knob value="10" class="horz-knob knob">
+        <svg preserveAspectRatio="none" x="0" y="0" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+          <polygon class="knob-shape" points="5 25, 25 25, 25 5, 75 5, 75 25, 95 25, 95 75, 75 75, 75 95, 25 95, 25 75, 5 75"/>
+          <text class="knob-label" x="50%" y="25%" dominant-baseline="middle" text-anchor="middle">H</text>
+          <text class="knob-label" x="50%" y="80%" dominant-baseline="middle" text-anchor="middle">⇔</text>
+        </svg>
+      </touch-knob>
       <div class="buttons">
         <button class="button-shake">👋 Shake</button>
         <toggle-fullscreen><button class="button-fullscreen">⤴️ Full</button></toggle-fullscreen>
         <button class="button-detail" value="fancy">✨ Fancy</button>
         <a href="https://github.com/GoogleChromeLabs/rotavo-pwa" target="_blank"><button>❔ Learn</button></a>
       </div>
-      <touch-knob value="10" class="vert-knob knob">V<br />⇳</touch-knob>
+      <touch-knob value="10" class="vert-knob knob">
+          <svg preserveAspectRatio="none" x="0" y="0" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <polygon class="knob-shape" points="5 25, 25 25, 25 5, 75 5, 75 25, 95 25, 95 75, 75 75, 75 95, 25 95, 25 75, 5 75"/>
+            <text class="knob-label" x="50%" y="25%" dominant-baseline="middle" text-anchor="middle">V</text>
+            <text class="knob-label" x="50%" y="80%" dominant-baseline="middle" text-anchor="middle">⇕</text>
+          </svg>
+      </touch-knob>
     </div>
 </doodle-case>
 <script src="/bundle.js" async defer></script>

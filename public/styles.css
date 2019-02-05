@@ -64,11 +64,11 @@ touch-knob {
   flex: 0 0 80px;
   width: 80px;
   height: 80px;
-  border: 6px dotted #BFACC8;
-  background: #ffffff;
+  /* border: 6px dotted #BFACC8;
+  background: #ffffff; */
   opacity: 0.6;
   font-weight: bolder;
-  border-radius: 100%;
+  /* border-radius: 100%; */
   text-align: center;
   user-select: none;
   -webkit-user-select: none;
@@ -77,6 +77,19 @@ touch-knob {
   margin: 0;
   overflow: hidden;
   contain: strict;
+}
+
+.knob-shape {
+  stroke: url(#pattern);
+  stroke-width: 5;
+  /* stroke: #4A4063;
+  stroke-linejoin: round;
+  stroke-dasharray: 8 4; */
+  fill: #FFFFFF;
+}
+
+.knob-label {
+  font-size: 20px;
 }
 
 .buttons {
