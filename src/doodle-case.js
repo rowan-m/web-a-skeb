@@ -26,6 +26,19 @@ class Sketch {
     return this.path[this.path.length - 1];
   }
 
+  get lastAngle() {
+    if (this.path.length < 2) {
+      return null;
+    }
+
+    const penultimatePoint = this.path[this.path.length - 2];
+
+    return Math.atan2(
+      this.lastPoint.x - penultimatePoint.x,
+      this.lastPoint.y - penultimatePoint.y
+    );
+  }
+
   moveTo(point) {
     point = {
       x: parseFloat(point.x),
@@ -37,11 +50,10 @@ class Sketch {
       point.y - this.lastPoint.y
     );
 
-    if (angle === this._lastAngle && (this.lastPoint.x !== point.x || this.lastPoint.y !== point.y)) {
+    if (angle === this.lastAngle && (this.lastPoint.x !== point.x || this.lastPoint.y !== point.y)) {
       this.path.pop();
     }
 
-    this._lastAngle = angle;
     this.path.push(point);
   }
 
