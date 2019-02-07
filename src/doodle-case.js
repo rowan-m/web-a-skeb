@@ -185,7 +185,7 @@ export class DoodleCase extends HTMLElement {
       erasedSketch.setAttributeNS(null, 'preserveAspectRatio', 'none');
       erasedSketch.setAttributeNS(null, 'x', '0');
       erasedSketch.setAttributeNS(null, 'y', '0');
-      erasedSketch.setAttributeNS(null, 'viewBox', '-2 2 302 302');
+      erasedSketch.setAttributeNS(null, 'viewBox', '-2 -2 302 302');
       erasedSketch.style.opacity = '1';
 
       erasedSketch.appendChild(this._path);
